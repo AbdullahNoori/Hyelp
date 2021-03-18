@@ -4,6 +4,8 @@ from .yelp import YelpAPI
 from django.http import HttpResponse
 
 
+
+
 def index(request):
     yelp = YelpAPI()
     print(yelp.search("barber", "nyc"))
