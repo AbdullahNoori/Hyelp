@@ -1,0 +1,155 @@
+{% load static %}
+
+<!--Desktop Aside bar Start -->
+<aside class="sigma_aside sigma_aside-desktop">
+
+    <div class="sidebar">
+
+      <div class="sidebar-widget">
+        <img src="{% static 'img/logo.png' %}" class="mb-30" alt="img">
+        <p class="mb-0">Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Donec rutrum congue leo eget malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+      </div>
+      <!-- Recent Posts Widget -->
+     <div class="sidebar-widget">
+            <h5>Recent Posts</h5>
+            <article class="media">
+              <a href="#"><img src="{% static 'img/blog-sm/1.jpg' %}" alt="post"></a>
+              <div class="media-body">
+                <h6> <a href="#">10 Top Showroom Planners </a> </h6>
+                <span>January 22, 2021</span>
+              </div>
+            </article>
+            <article class="media">
+              <a href="#"><img src="{% static 'img/blog-sm/2.jpg' %}" alt="post"></a>
+              <div class="media-body">
+                <h6> <a href="#">How to get better agents in NYC</a> </h6>
+                <span>January 24, 2021</span>
+              </div>
+            </article>
+            <article class="media">
+              <a href="#"><img src="{% static 'img/blog-sm/3.jpg' %}" alt="post"></a>
+              <div class="media-body">
+                <h6> <a href="#">Showroom Venue where you will get your dream </a> </h6>
+                <span>January 26, 2021</span>
+              </div>
+            </article>
+            <article class="media">
+              <a href="#"><img src="{% static 'img/blog-sm/4.jpg' %}" alt="post"></a>
+              <div class="media-body">
+                <h6> <a href="#">ROLLERDROME FAMILY SKATE CENTER</a> </h6>
+                <span>January 28, 2021</span>
+              </div>
+            </article>
+     </div>
+
+    </div>
+
+  </aside>
+  <div class="sigma_aside-overlay aside-trigger-right"></div>
+  <!--Desktop Aside bar End -->
+
+  <!--Mobile Aside nav Start -->
+  <aside class="sigma_aside">
+    <div class="sigma_close aside-trigger">
+      <span></span>
+      <span></span>
+    </div>
+    <div class="sigma_logo-wrapper">
+      <a class="sigma_logo" href="index.html">
+        <img src="{% static 'img/logo.png' %}" alt="logo">
+      </a>
+    </div>
+   <ul class="navbar-nav">
+            <li class="menu-item menu-item-has-children">
+              <a href="#">Home Pages</a>
+              <ul class="sub-menu">
+                <li class="menu-item"> <a href="index.html">Home v1</a> </li>
+                <li class="menu-item"> <a href="home-v2.html">Home v2</a> </li>
+                <li class="menu-item"> <a href="home-v3.html">Home v3</a> </li>
+
+              </ul>
+            </li>
+            <li class="menu-item menu-item-has-children">
+              <a href="#">Blog</a>
+              <ul class="sub-menu">
+                <li class="menu-item menu-item-has-children">
+                  <a href="blog-grid.html">Blog Archive</a>
+                  <ul class="sub-menu">
+                    <li class="menu-item"> <a href="blog-left-sidebar.html">Left Sidebar</a> </li>
+                    <li class="menu-item"> <a href="blog-right-sidebar.html">Right Sidebar</a> </li>
+                    <li class="menu-item"> <a href="blog-grid.html">Grid View</a> </li>
+                    <li class="menu-item"> <a href="blog-list.html">List View</a> </li>
+                  </ul>
+                </li>
+                <li class="menu-item">
+                  <a href="blog-single.html">Blog Single</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item menu-item-has-children">
+              <a href="#">Pages</a>
+              <ul class="sub-menu">
+                <li class="menu-item"><a href="about-us.html">About Us</a></li>
+                <li class="menu-item"><a href="services.html">Services</a></li>
+                <li class="menu-item"><a href="faq.html">FAQ</a></li>
+                <li class="menu-item"><a href="pricing.html">Pricing</a></li>
+                <li class="menu-item"><a href="contact-us.html">Contact Us</a></li>
+                <li class="menu-item"><a href="coming-soon.html">Coming Soon</a></li>
+                <li class="menu-item"><a href="404.html">404 Page</a></li>
+                <li class="menu-item"><a href="login.html">Login</a></li>
+                <li class="menu-item"><a href="register.html">Register</a></li>
+                <li class="menu-item"><a href="legal.html">Legal</a></li>
+              </ul>
+            </li>
+            <li class="menu-item menu-item-has-children">
+              <a href="#">Tours</a>
+              <ul class="sub-menu">
+                <li class="menu-item menu-item-has-children">
+                  <a href="listing-map.html">Tours Archive</a>
+                  <ul class="sub-menu">
+                    <li class="menu-item"> <a href="listing-grid.html">Grid Package</a> </li>
+                    <li class="menu-item"> <a href="listing-list.html">List Package v1</a> </li>
+                    <li class="menu-item"> <a href="listing-list-v2.html">List Package v2</a> </li>
+                    <li class="menu-item"> <a href="listing-map.html">Map List</a> </li>
+                  </ul>
+                </li>
+                <li class="menu-item menu-item-has-children">
+                  <a href="listing-details-v1.html">Listing Details</a>
+                  <ul class="sub-menu">
+                    <li class="menu-item"> <a href="listing-details-v1.html">Listing Details v1</a> </li>
+                    <li class="menu-item"> <a href="listing-details-v2.html">Listing Details v2</a> </li>
+                    <li class="menu-item"> <a href="listing-details-v3.html">Listing Details v3</a> </li>
+                  </ul>
+                </li>
+                <li class="menu-item"> <a href="gallery.html">Gallery</a> </li>
+                <li class="menu-item"> <a href="submit-listing.html">Submit Listing</a> </li>
+                <li class="menu-item"> <a href="compare-listings.html">Compare Tours</a> </li>
+              </ul>
+            </li>
+            <li class="menu-item menu-item-has-children">
+              <a href="guide-archive.html">Guide</a>
+              <ul class="sub-menu">
+                <li class="menu-item"> <a href="guide-archive.html">Guide Archive v1</a> </li>
+                 <li class="menu-item"> <a href="guide-archive-v2.html">Guide Archive v2</a> </li>
+                <li class="menu-item"> <a href="guide-details.html">Guide Details</a> </li>
+                <li class="menu-item menu-item-has-children">
+                  <a href="profile.html">User Profile</a>
+                  <ul class="sub-menu">
+                    <li class="menu-item"> <a href="profile.html">My Account</a> </li>
+                    <li class="menu-item"> <a href="profile-listings.html">My Tours</a> </li>
+                    <li class="menu-item"> <a href="profile-saved-listings.html">Saved Tours</a> </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item menu-item-has-children">
+              <a href="agency-archive.html">Agency</a>
+              <ul class="sub-menu">
+                <li class="menu-item"> <a href="agency-archive.html">Agency Archive</a> </li>
+                <li class="menu-item"> <a href="agency-details.html">Agency Details</a> </li>
+              </ul>
+            </li>
+          </ul>
+  </aside>
+  <div class="sigma_aside-overlay aside-trigger"></div>
+  <!--Mobile Aside nav End -->

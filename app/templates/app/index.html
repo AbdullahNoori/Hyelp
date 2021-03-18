@@ -1,0 +1,1442 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Hyelper</title>
+      {% load static %}
+      <link rel="stylesheet" href="{% static 'css/plugins/bootstrap.min.css' %}">
+      <link rel="stylesheet" href="{% static 'css/plugins/bootstrap-datepicker.min.css' %}">
+      <link rel="stylesheet" href="{% static 'css/plugins/animate.min.css' %}">
+      <link rel="stylesheet" href="{% static 'css/plugins/magnific-popup.css' %}">
+      <link rel="stylesheet" href="{% static 'css/plugins/slick.css' %}">
+      <link rel="stylesheet" href="{% static 'css/plugins/slick-theme.css' %}">
+      <link rel="stylesheet" href="{% static 'css/plugins/select2.min.css' %}">
+      <!-- Icon Fonts -->
+      <link rel="stylesheet" href="{% static 'fonts/flaticon/flaticon.css' %}">
+      <link rel="stylesheet" href="{% static 'fonts/font-awesome/css/all.min.css' %}">
+      <!-- Tours Style sheet -->
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <!-- Favicon -->
+      <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
+   </head>
+   <body>
+      <!-- Preloader Start -->
+      <div class="acr-preloader">
+         <div class="acr-preloader-inner">
+            <img src="{% static 'img/svg/preloader.svg" alt="preloader">
+         </div>
+      </div>
+      <!-- Preloader End -->
+      <!--Desktop Aside bar Start -->
+      <aside class="sigma_aside sigma_aside-desktop">
+         <div class="sidebar">
+            <div class="sidebar-widget">
+               <img src="{% static 'img/logo.png' %}" class="mb-30" alt="img">
+               <p class="mb-0">Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Donec rutrum congue leo eget malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+            </div>
+            <!-- Recent Posts Widget -->
+            <div class="sidebar-widget">
+               <h5>Recent Posts</h5>
+               <article class="media">
+                  <a href="#"><img src="{% static 'img/blog-sm/1.jpg' %}" alt="post"></a>
+                  <div class="media-body">
+                     <h6> <a href="#">10 Top Showroom Planners </a> </h6>
+                     <span>January 22, 2021</span>
+                  </div>
+               </article>
+               <article class="media">
+                  <a href="#"><img src="{% static 'img/blog-sm/2.jpg' %}" alt="post"></a>
+                  <div class="media-body">
+                     <h6> <a href="#">How to get better agents in NYC</a> </h6>
+                     <span>January 24, 2021</span>
+                  </div>
+               </article>
+               <article class="media">
+                  <a href="#"><img src="{% static 'img/blog-sm/3.jpg' %}" alt="post"></a>
+                  <div class="media-body">
+                     <h6> <a href="#">Showroom Venue where you will get your dream </a> </h6>
+                     <span>January 26, 2021</span>
+                  </div>
+               </article>
+               <article class="media">
+                  <a href="#"><img src="{% static 'img/blog-sm/4.jpg' %}" alt="post"></a>
+                  <div class="media-body">
+                     <h6> <a href="#">ROLLERDROME FAMILY SKATE CENTER</a> </h6>
+                     <span>January 28, 2021</span>
+                  </div>
+               </article>
+            </div>
+         </div>
+      </aside>
+      <div class="sigma_aside-overlay aside-trigger-right"></div>
+      <!--Desktop Aside bar End -->
+      <!--Mobile Aside nav Start -->
+      <aside class="sigma_aside">
+         <div class="sigma_close aside-trigger">
+            <span></span>
+            <span></span>
+         </div>
+         <div class="sigma_logo-wrapper">
+            <a class="sigma_logo" href="index.html">
+            <img src="{% static 'img/logo.png' %}" alt="logo">
+            </a>
+         </div>
+         <ul class="navbar-nav">
+            <li class="menu-item menu-item-has-children">
+               <a href="#">Home Pages</a>
+               <ul class="sub-menu">
+                  <li class="menu-item"> <a href="index.html">Home v1</a> </li>
+                  <li class="menu-item"> <a href="home-v2.html">Home v2</a> </li>
+                  <li class="menu-item"> <a href="home-v3.html">Home v3</a> </li>
+               </ul>
+            </li>
+            <li class="menu-item menu-item-has-children">
+               <a href="#">Blog</a>
+               <ul class="sub-menu">
+                  <li class="menu-item menu-item-has-children">
+                     <a href="blog-grid.html">Blog Archive</a>
+                     <ul class="sub-menu">
+                        <li class="menu-item"> <a href="blog-left-sidebar.html">Left Sidebar</a> </li>
+                        <li class="menu-item"> <a href="blog-right-sidebar.html">Right Sidebar</a> </li>
+                        <li class="menu-item"> <a href="blog-grid.html">Grid View</a> </li>
+                        <li class="menu-item"> <a href="blog-list.html">List View</a> </li>
+                     </ul>
+                  </li>
+                  <li class="menu-item">
+                     <a href="blog-single.html">Blog Single</a>
+                  </li>
+               </ul>
+            </li>
+            <li class="menu-item menu-item-has-children">
+               <a href="#">Pages</a>
+               <ul class="sub-menu">
+                  <li class="menu-item"><a href="about-us.html">About Us</a></li>
+                  <li class="menu-item"><a href="services.html">Services</a></li>
+                  <li class="menu-item"><a href="faq.html">FAQ</a></li>
+                  <li class="menu-item"><a href="pricing.html">Pricing</a></li>
+                  <li class="menu-item"><a href="contact-us.html">Contact Us</a></li>
+                  <li class="menu-item"><a href="coming-soon.html">Coming Soon</a></li>
+                  <li class="menu-item"><a href="404.html">404 Page</a></li>
+                  <li class="menu-item"><a href="login.html">Login</a></li>
+                  <li class="menu-item"><a href="register.html">Register</a></li>
+                  <li class="menu-item"><a href="legal.html">Legal</a></li>
+               </ul>
+            </li>
+            <li class="menu-item menu-item-has-children">
+               <a href="#">Tours</a>
+               <ul class="sub-menu">
+                  <li class="menu-item menu-item-has-children">
+                     <a href="listing-map.html">Tours Archive</a>
+                     <ul class="sub-menu">
+                        <li class="menu-item"> <a href="listing-grid.html">Grid Package</a> </li>
+                        <li class="menu-item"> <a href="listing-list.html">List Package v1</a> </li>
+                        <li class="menu-item"> <a href="listing-list-v2.html">List Package v2</a> </li>
+                        <li class="menu-item"> <a href="listing-map.html">Map List</a> </li>
+                     </ul>
+                  </li>
+                  <li class="menu-item menu-item-has-children">
+                     <a href="listing-details-v1.html">Listing Details</a>
+                     <ul class="sub-menu">
+                        <li class="menu-item"> <a href="listing-details-v1.html">Listing Details v1</a> </li>
+                        <li class="menu-item"> <a href="listing-details-v2.html">Listing Details v2</a> </li>
+                        <li class="menu-item"> <a href="listing-details-v3.html">Listing Details v3</a> </li>
+                     </ul>
+                  </li>
+                  <li class="menu-item"> <a href="gallery.html">Gallery</a> </li>
+                  <li class="menu-item"> <a href="submit-listing.html">Submit Listing</a> </li>
+                  <li class="menu-item"> <a href="compare-listings.html">Compare Tours</a> </li>
+               </ul>
+            </li>
+            <li class="menu-item menu-item-has-children">
+               <a href="guide-archive.html">Guide</a>
+               <ul class="sub-menu">
+                  <li class="menu-item"> <a href="guide-archive.html">Guide Archive v1</a> </li>
+                  <li class="menu-item"> <a href="guide-archive-v2.html">Guide Archive v2</a> </li>
+                  <li class="menu-item"> <a href="guide-details.html">Guide Details</a> </li>
+                  <li class="menu-item menu-item-has-children">
+                     <a href="profile.html">User Profile</a>
+                     <ul class="sub-menu">
+                        <li class="menu-item"> <a href="profile.html">My Account</a> </li>
+                        <li class="menu-item"> <a href="profile-listings.html">My Tours</a> </li>
+                        <li class="menu-item"> <a href="profile-saved-listings.html">Saved Tours</a> </li>
+                     </ul>
+                  </li>
+               </ul>
+            </li>
+            <li class="menu-item menu-item-has-children">
+               <a href="agency-archive.html">Agency</a>
+               <ul class="sub-menu">
+                  <li class="menu-item"> <a href="agency-archive.html">Agency Archive</a> </li>
+                  <li class="menu-item"> <a href="agency-details.html">Agency Details</a> </li>
+               </ul>
+            </li>
+         </ul>
+      </aside>
+      <div class="sigma_aside-overlay aside-trigger"></div>
+      <!--Mobile Aside nav End -->
+      <!-- Header Start -->
+      <header class="sigma_header style-1 can-sticky">
+         <div class="sigma_header-middle">
+            <div class="container">
+               <div class="navbar">
+                  <div class="sigma_logo-wrapper">
+                     <a class="sigma_logo" href="index.html">
+                     <img src="{% static 'img/logo.png' %}" alt="logo">
+                     </a>
+                  </div>
+                  <div class="sigma_header-controls style-1">
+                     <ul class="sigma_header-controls-inner">
+                        <li class="search-trigger header-controls-item d-none d-sm-block">
+                           <a class="sigma_header-control-search" title="Search" href="#">
+                           <i class="flaticon-search"></i>
+                           </a>
+                        </li>
+                        <li class="ml-3 d-none d-sm-block">
+                           <a href="listing-details-v1.html" class="btn-custom primary">Book now </a>
+                        </li>
+                        <li class="aside-toggle aside-trigger">
+                           <span></span>
+                           <span></span>
+                           <span></span>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="sigma_header-bottom">
+            <div class="container">
+               <div class="sigma_header-bottom-inner">
+                  <ul class="navbar-nav">
+                     <li class="menu-item menu-item-has-children">
+                        <a href="#">Home Pages</a>
+                        <ul class="sub-menu">
+                           <li class="menu-item"> <a href="index.html">Home v1</a> </li>
+                           <li class="menu-item"> <a href="home-v2.html">Home v2</a> </li>
+                           <li class="menu-item"> <a href="home-v3.html">Home v3</a> </li>
+                        </ul>
+                     </li>
+                     <li class="menu-item menu-item-has-children">
+                        <a href="#">Blog</a>
+                        <ul class="sub-menu">
+                           <li class="menu-item menu-item-has-children">
+                              <a href="blog-grid.html">Blog Archive</a>
+                              <ul class="sub-menu">
+                                 <li class="menu-item"> <a href="blog-left-sidebar.html">Left Sidebar</a> </li>
+                                 <li class="menu-item"> <a href="blog-right-sidebar.html">Right Sidebar</a> </li>
+                                 <li class="menu-item"> <a href="blog-grid.html">Grid View</a> </li>
+                                 <li class="menu-item"> <a href="blog-list.html">List View</a> </li>
+                              </ul>
+                           </li>
+                           <li class="menu-item">
+                              <a href="blog-single.html">Blog Single</a>
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="menu-item menu-item-has-children mega-menu-wrapper">
+                        <a href="#">Pages</a>
+                        <ul class="sub-menu">
+                           <li>
+                              <img src="{% static 'img/megamenu.png' %}" alt="img">
+                              <div class="container">
+                                 <div class="row">
+                                    <div class="col-lg-4">
+                                       <div class="mega-menu-item">
+                                          <h5>Featured Tours</h5>
+                                          <p>
+                                             Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC,
+                                             making it over 2000 years old.
+                                          </p>
+                                          <a href="listing-map.html" class="btn-custom secondary">Package All</a>
+                                       </div>
+                                    </div>
+                                    <div class="offset-lg-1 col-lg-3">
+                                       <div class="mega-menu-item">
+                                          <h5>Pages</h5>
+                                          <a href="about-us.html">About Us</a>
+                                          <a href="services.html">Services</a>
+                                          <a href="faq.html">FAQ</a>
+                                          <a href="pricing.html">Pricing</a>
+                                          <a href="contact-us.html">Contact Us</a>
+                                       </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                       <div class="mega-menu-item">
+                                          <h5>Other Pages</h5>
+                                          <a href="coming-soon.html">Coming Soon</a>
+                                          <a href="404.html">404 Page</a>
+                                          <a href="login.html">Login</a>
+                                          <a href="register.html">Register</a>
+                                          <a href="legal.html">Legal</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="menu-item menu-item-has-children">
+                        <a href="#">Tours</a>
+                        <ul class="sub-menu">
+                           <li class="menu-item menu-item-has-children">
+                              <a href="listing-map.html">Tours Archive</a>
+                              <ul class="sub-menu">
+                                 <li class="menu-item"> <a href="listing-grid.html">Grid Package</a> </li>
+                                 <li class="menu-item"> <a href="listing-list.html">List Package v1</a> </li>
+                                 <li class="menu-item"> <a href="listing-list-v2.html">List Package v2</a> </li>
+                                 <li class="menu-item"> <a href="listing-map.html">Map List</a> </li>
+                              </ul>
+                           </li>
+                           <li class="menu-item menu-item-has-children">
+                              <a href="listing-details-v1.html">Listing Details</a>
+                              <ul class="sub-menu">
+                                 <li class="menu-item"> <a href="listing-details-v1.html">Listing Details v1</a> </li>
+                                 <li class="menu-item"> <a href="listing-details-v2.html">Listing Details v2</a> </li>
+                                 <li class="menu-item"> <a href="listing-details-v3.html">Listing Details v3</a> </li>
+                              </ul>
+                           </li>
+                           <li class="menu-item"> <a href="gallery.html">Gallery</a> </li>
+                           <li class="menu-item"> <a href="submit-listing.html">Submit Listing</a> </li>
+                           <li class="menu-item"> <a href="compare-listings.html">Compare Tours</a> </li>
+                        </ul>
+                     </li>
+                     <li class="menu-item menu-item-has-children">
+                        <a href="guide-archive.html">Guide</a>
+                        <ul class="sub-menu">
+                           <li class="menu-item"> <a href="guide-archive.html">Guide Archive v1</a> </li>
+                           <li class="menu-item"> <a href="guide-archive-v2.html">Guide Archive v2</a> </li>
+                           <li class="menu-item"> <a href="guide-details.html">Guide Details</a> </li>
+                           <li class="menu-item menu-item-has-children">
+                              <a href="profile.html">User Profile</a>
+                              <ul class="sub-menu">
+                                 <li class="menu-item"> <a href="profile.html">My Account</a> </li>
+                                 <li class="menu-item"> <a href="profile-listings.html">My Tours</a> </li>
+                                 <li class="menu-item"> <a href="profile-saved-listings.html">Saved Tours</a> </li>
+                              </ul>
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="menu-item menu-item-has-children">
+                        <a href="agency-archive.html">Agency</a>
+                        <ul class="sub-menu">
+                           <li class="menu-item"> <a href="agency-archive.html">Agency Archive</a> </li>
+                           <li class="menu-item"> <a href="agency-details.html">Agency Details</a> </li>
+                        </ul>
+                     </li>
+                  </ul>
+                  <div class="aside-toggle aside-trigger-right desktop-toggler">
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <div class="search-form-wrapper">
+         <div class="search-trigger sigma_close">
+            <span></span>
+            <span></span>
+         </div>
+         <form class="search-form" method="post">
+            <input type="text" placeholder="Search..." value="">
+            <button type="submit" class="search-btn">
+            <i class="flaticon-search m-0"></i>
+            </button>
+         </form>
+      </div>
+      <!-- Header End -->
+      <!-- Banner Start -->
+      <div class="banner sigma_banner">
+         <div class="banner-slider">
+            <div class="banner-inner bg-cover bg-center dark-overlay" style="background-image: url('{% static 'img/banner/1.jpg' %}')">
+               <div class="container">
+                  <div class="row align-items-center">
+                     <div class="col-lg-8">
+                        <div class="banner-text mb-0">
+                           <h1 class="title text-white">Find Your Best Tour Manager  </h1>
+                           <p class="subtitle text-white mb-0">Thousands of packages which can bring happiness to your life , Don't miss your chance to grab your dream tour plan.</p>
+                        </div>
+                     </div>
+                     <div class="col-lg-4">
+                      <a href="https://www.youtube.com/watch?v=ySITvuQ1K74" class=" sigma_video-btn popup-youtube">
+                       <i class="fas fa-play"></i>
+                      </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="banner-inner bg-cover bg-center dark-overlay" style="background-image: url('{% static 'img/banner/2.jpg' %}')">
+               <div class="container">
+                  <div class="row align-items-center">
+                     <div class="col-lg-8">
+                        <div class="banner-text mb-0">
+                           <h1 class="title text-white">Find Your Best Tour Manager  </h1>
+                           <p class="subtitle text-white mb-0">Thousands of packages which can bring happiness to your life , Don't miss your chance to grab your dream tour plan.</p>
+                        </div>
+                     </div>
+                     <div class="col-lg-4">
+                      <a href="https://www.youtube.com/watch?v=ySITvuQ1K74" class=" sigma_video-btn popup-youtube">
+                       <i class="fas fa-play"></i>
+                      </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="banner-inner bg-cover bg-center dark-overlay" style="background-image: url('{% static 'img/banner/1.jpg' %}')">
+               <div class="container">
+                  <div class="row align-items-center">
+                     <div class="col-lg-8">
+                        <div class="banner-text mb-0">
+                           <h1 class="title text-white">Find Your Best Tour Manager  </h1>
+                           <p class="subtitle text-white mb-0">Thousands of packages which can bring happiness to your life , Don't miss your chance to grab your dream tour plan.</p>
+                        </div>
+                     </div>
+                     <div class="col-lg-4">
+                      <a href="https://www.youtube.com/watch?v=ySITvuQ1K74" class=" sigma_video-btn popup-youtube">
+                       <i class="fas fa-play"></i>
+                      </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="banner-inner bg-cover bg-center dark-overlay" style="background-image: url('{% static 'img/banner/2.jpg' %}')">
+               <div class="container">
+                  <div class="row align-items-center">
+                     <div class="col-lg-8">
+                        <div class="banner-text mb-0">
+                           <h1 class="title text-white">Find Your Best Tour Manager  </h1>
+                           <p class="subtitle text-white mb-0">Thousands of packages which can bring happiness to your life , Don't miss your chance to grab your dream tour plan.</p>
+                        </div>
+                     </div>
+                     <div class="col-lg-4">
+                      <a href="https://www.youtube.com/watch?v=ySITvuQ1K74" class=" sigma_video-btn popup-youtube">
+                       <i class="fas fa-play"></i>
+                      </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="social-media-wrapper d-none d-md-block">
+           <ul class="social-media">
+              <li>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </li>
+            </ul>
+         </div>
+      </div>
+      <!-- Banner End -->
+
+    <!------- BOOKING FORM START ------->
+    <section class="booking-form boxed-layout">
+      <div class="container">
+            <div class="booking-form-inner">
+              <form action="#">
+                <div class="row align-items-end">
+                  <div class="col-lg-3 col-md-6">
+                      <label>Destination</label>
+                      <input type="text" class="form-control" placeholder="California, CA" name="country">
+                  </div>
+                  <div class="col-lg-3 col-md-6 mt-3 mt-lg-0">
+                      <label>Departure</label>
+                      <input type="text" class="form-control" data-provide="datepicker" placeholder="02/08/2021" name="country">
+                  </div>
+                  <div class="col-lg-3 col-md-6 mt-3 mt-lg-0">
+                      <label>Arrival</label>
+                      <input type="text" class="form-control" data-provide="datepicker" placeholder="09/02/2022" name="country">
+                  </div>
+                  <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
+                      <button type="submit" class="btn-custom secondary btn-block">Search</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+      </div>
+    </section>
+    <!------- BOOKING FORM EN ------>
+
+    <!-- Work Experience sec Start -->
+      <div class="section work-experience-sec">
+         <div class="container">
+            <div class="row">
+               <div class="col-12">
+                  <div class="experience-wrapper">
+                     <div class="experience-inner">
+                        <div class="experience-inner-image">
+                           <img src="{% static 'img/cta1.jpg' %}" class="full-width" alt="img">
+                        </div>
+                        <div class="experience-inner-content">
+                           <h3>Why Do People Believe Us</h3>
+                           <div class="row align-items-center">
+                              <div class="col-lg-8">
+                                 <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+                              </div>
+                              <div class="col-lg-4">
+                                 <div class="experience-number">
+                                    <span class="number">
+                                    25
+                                    <span>years</span>
+                                    </span>
+                                    <h6>Work Experience</h6>
+                                    <a href="#" class="btn-link">Find Out More
+                                    <i class="fas fa-arrow-right"></i>
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Work Experience sec End -->
+
+      <!-- Categories Start -->
+      <div class="section section-padding  pt-0">
+         <div class="container">
+            <div class="section-title-wrap section-header">
+               <h5 class="custom-primary">Categories</h5>
+               <h2 class="title">Top Destinations</h2>
+            </div>
+            <div class="row">
+               <div class="col-lg-4 col-md-6">
+                  <div class="acr-category">
+                     <div class="acr-category-thumb">
+                        <a href="#"><img src="{% static 'img/categories/1.jpg' %}" alt="category"></a>
+                        <div class="acr-category-body">
+                          <div class="dest-img">
+                           <i class="flaticon-burj-al-arab"></i>
+                          </div>
+                          <span class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Dubai
+                          </span>
+                           <h5> <a href="#">Burj Khalifa</a> </h5>
+                           <span>(90 Tours)</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-6">
+                  <div class="acr-category">
+                     <div class="acr-category-thumb">
+                        <a href="#"><img src="{% static 'img/categories/2.jpg' %}" alt="category"></a>
+                        <div class="acr-category-body">
+                          <div class="dest-img">
+                           <i class="flaticon-eiffel-tower"></i>
+                           </div>
+                           <span class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            France
+                          </span>
+                           <h5> <a href="#">Paris</a> </h5>
+                           <span>(433 Tours)</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-6">
+                  <div class="acr-category">
+                     <div class="acr-category-thumb">
+                        <a href="#"><img src="{% static 'img/categories/3.jpg' %}" alt="category"></a>
+                        <div class="acr-category-body">
+                          <div class="dest-img">
+                           <i class="flaticon-pisa-tower"></i>
+                          </div>
+                          <span class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Italy
+                          </span>
+                           <h5> <a href="#">Vanice</a> </h5>
+                           <span>(221 Tours)</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-6">
+                  <div class="acr-category">
+                     <div class="acr-category-thumb">
+                        <a href="#"><img src="{% static 'img/categories/4.jpg' %}" alt="category"></a>
+                        <div class="acr-category-body">
+                          <div class="dest-img">
+                           <i class="flaticon-borobudur"></i>
+                          </div>
+                          <span class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Indonesia
+                          </span>
+                           <h5> <a href="#">Bali</a> </h5>
+                           <span>(185 Tours)</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-6">
+                  <div class="acr-category">
+                     <div class="acr-category-thumb">
+                        <a href="#"><img src="{% static 'img/categories/5.jpg' %}" alt="category"></a>
+                        <div class="acr-category-body">
+                           <div class="dest-img">
+                           <i class="flaticon-brandenburg-gate"></i>
+                           </div>
+                           <span class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            Germany
+                          </span>
+                           <h5> <a href="#">Berlin </a> </h5>
+                           <span>(230 Tours)</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-6">
+                  <div class="acr-category">
+                     <div class="acr-category-thumb">
+                        <a href="#"><img src="{% static 'img/categories/6.jpg' %}" alt="category"></a>
+                        <div class="acr-category-body">
+                          <div class="dest-img">
+                           <i class="flaticon-gate-of-india"></i>
+                          </div>
+                          <span class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            India
+                          </span>
+                           <h5> <a href="#">Kerala</a> </h5>
+                           <span>(365 Tours)</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Categories End -->
+      <!-- Tours Slider Start -->
+      <div class="section section-padding pt-0 listings">
+         <div class="container">
+            <div class="section-title-wrap section-header flex-header">
+               <div class="section-title-text">
+                  <h5 class="custom-primary">Find Your Property Planner</h5>
+                  <h2 class="title">Top Property Packages</h2>
+               </div>
+               <div class="acr-arrows primary-arrows">
+                  <i class="slider-prev fas fa-arrow-left slick-arrow"></i>
+                  <i class="slider-next fas fa-arrow-right slick-arrow"></i>
+               </div>
+            </div>
+            <div class="listings-slider">
+               <!-- Listing Start -->
+               <div class="listing">
+                  <div class="listing-thumbnail">
+                     <a href="listing-details-v1.html"><img src="{% static 'img/listings/1.jpg' %}" alt="listing"></a>
+                     <div class="listing-badges">
+                        <span class="listing-badge featured"> <i class="fas fa-star"></i> </span>
+                        <span class="listing-badge pending"> Pending</span>
+                     </div>
+                     <div class="listing-controls">
+                        <a href="#" class="favorite"><i class="far fa-heart"></i></a>
+                        <a href="#" class="compare"><i class="fas fa-sync-alt"></i></a>
+                     </div>
+                  </div>
+                  <div class="listing-body">
+                     <div class="listing-author">
+                        <img src="{% static 'img/people/2.jpg' %}" alt="author">
+                        <div class="listing-author-body">
+                           <p> <a href="#">Heather Mclayn</a> </p>
+                           <span class="listing-date">March 3, 2021</span>
+                        </div>
+                        <div class="dropdown options-dropdown">
+                           <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
+                           <div class="dropdown-menu dropdown-menu-right">
+                              <ul>
+                                 <li> <a href="tel:+123456789"> <i class="fas fa-phone"></i> Call Guide</a> </li>
+                                 <li> <a href="mailto:+123456789"> <i class="fas fa-envelope"></i> Send Message</a> </li>
+                                 <li> <a href="listing-details-v1.html"> <i class="fas fa-bookmark"></i> Book Tour</a> </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <h5 class="listing-title"> <a href="listing-details-v1.html" title="Honeymoon Package">Honeymoon Package</a> </h5>
+                     <span class="listing-price">3,500$ <span>/Person</span> </span>
+                     <p class="listing-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                     <div class="acr-listing-icons">
+                        <div class="acr-listing-icon" data-toggle="tooltip" title="Hotel">
+                           <i class="flaticon-price-tags"></i>
+                           <span class="acr-listing-icon-value">3</span>
+                        </div>
+                        <div class="acr-listing-icon" data-toggle="tooltip" title="Guide">
+                           <i class="flaticon-tour-guide"></i>
+                           <span class="acr-listing-icon-value">2</span>
+                        </div>
+                        <div class="acr-listing-icon" data-toggle="tooltip" title="Tickets">
+                           <i class="flaticon-airplane"></i>
+                           <span class="acr-listing-icon-value">220</span>
+                        </div>
+                     </div>
+                     <div class="listing-gallery-wrapper">
+                        <a href="listing-details-v1.html" class="btn-custom btn-sm secondary">Package Details</a>
+                        <a href="#" data-toggle="tooltip" title="Gallery" class="listing-gallery"> <i class="fas fa-camera"></i> </a>
+                     </div>
+                  </div>
+               </div>
+               <!-- Listing End -->
+               <!-- Listing Start -->
+               <div class="listing">
+                  <div class="listing-thumbnail">
+                     <a href="listing-details-v1.html"><img src="{% static 'img/listings/2.jpg' %}" alt="listing"></a>
+                     <div class="listing-badges">
+                        <span class="listing-badge featured"> <i class="fas fa-star"></i> </span>
+                        <span class="listing-badge sale"> On Property</span>
+                     </div>
+                     <div class="listing-controls">
+                        <a href="#" class="favorite"><i class="far fa-heart"></i></a>
+                        <a href="#" class="compare"><i class="fas fa-sync-alt"></i></a>
+                     </div>
+                  </div>
+                  <div class="listing-body">
+                     <div class="listing-author">
+                        <img src="{% static 'img/people/1.jpg' %}" alt="author">
+                        <div class="listing-author-body">
+                           <p> <a href="#">Randy Blue</a> </p>
+                           <span class="listing-date">March 3, 2021</span>
+                        </div>
+                        <div class="dropdown options-dropdown">
+                           <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
+                           <div class="dropdown-menu dropdown-menu-right">
+                              <ul>
+                                 <li> <a href="tel:+123456789"> <i class="fas fa-phone"></i> Call Guide</a> </li>
+                                 <li> <a href="mailto:+123456789"> <i class="fas fa-envelope"></i> Send Message</a> </li>
+                                 <li> <a href="listing-details-v1.html"> <i class="fas fa-bookmark"></i> Book Tour</a> </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <h5 class="listing-title"> <a href="listing-details-v1.html" title="7 Wonders Package ">7 Wonders Package </a> </h5>
+                     <span class="listing-price">2,300$ <span>/Person</span> </span>
+                     <p class="listing-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                     <div class="acr-listing-icons">
+                        <div class="acr-listing-icon" data-toggle="tooltip" title="Hotel">
+                           <i class="flaticon-price-tags"></i>
+                           <span class="acr-listing-icon-value">2</span>
+                        </div>
+                        <div class="acr-listing-icon" data-toggle="tooltip" title="Guide">
+                           <i class="flaticon-tour-guide"></i>
+                           <span class="acr-listing-icon-value">1</span>
+                        </div>
+                        <div class="acr-listing-icon" data-toggle="tooltip" title="Tickets">
+                           <i class="flaticon-airplane"></i>
+                           <span class="acr-listing-icon-value">280</span>
+                        </div>
+                     </div>
+                     <div class="listing-gallery-wrapper">
+                        <a href="listing-details-v1.html" class="btn-custom btn-sm secondary">Package Details</a>
+                        <a href="#" data-toggle="tooltip" title="Gallery" class="listing-gallery"> <i class="fas fa-camera"></i> </a>
+                     </div>
+                  </div>
+               </div>
+               <!-- Listing End -->
+               <!-- Listing Start -->
+               <div class="listing">
+                  <div class="listing-thumbnail">
+                     <a href="listing-details-v1.html"><img src="{% static 'img/listings/3.jpg' %}" alt="listing"></a>
+                     <div class="listing-badges">
+                        <span class="listing-badge pending"> Pending</span>
+                     </div>
+                     <div class="listing-controls">
+                        <a href="#" class="favorite"><i class="far fa-heart"></i></a>
+                        <a href="#" class="compare"><i class="fas fa-sync-alt"></i></a>
+                     </div>
+                  </div>
+                  <div class="listing-body">
+                     <div class="listing-author">
+                        <img src="{% static 'img/people/2.jpg' %}" alt="author">
+                        <div class="listing-author-body">
+                           <p> <a href="#">Heather Mclayn</a> </p>
+                           <span class="listing-date">March 3, 2021</span>
+                        </div>
+                        <div class="dropdown options-dropdown">
+                           <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
+                           <div class="dropdown-menu dropdown-menu-right">
+                              <ul>
+                                 <li> <a href="tel:+123456789"> <i class="fas fa-phone"></i> Call Guide</a> </li>
+                                 <li> <a href="mailto:+123456789"> <i class="fas fa-envelope"></i> Send Message</a> </li>
+                                 <li> <a href="listing-details-v1.html"> <i class="fas fa-bookmark"></i> Book Tour</a> </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <h5 class="listing-title"> <a href="listing-details-v1.html" title="Honeymoon Package">Honeymoon Package</a> </h5>
+                     <span class="listing-price">3,500$ <span>/Person</span> </span>
+                     <p class="listing-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                     <div class="acr-listing-icons">
+                        <div class="acr-listing-icon" data-toggle="tooltip" title="Hotel">
+                           <i class="flaticon-price-tags"></i>
+                           <span class="acr-listing-icon-value">3</span>
+                        </div>
+                        <div class="acr-listing-icon" data-toggle="tooltip" title="Guide">
+                           <i class="flaticon-tour-guide"></i>
+                           <span class="acr-listing-icon-value">2</span>
+                        </div>
+                        <div class="acr-listing-icon" data-toggle="tooltip" title="Tickets">
+                           <i class="flaticon-airplane"></i>
+                           <span class="acr-listing-icon-value">220</span>
+                        </div>
+                     </div>
+                     <div class="listing-gallery-wrapper">
+                        <a href="listing-details-v1.html" class="btn-custom btn-sm secondary">Package Details</a>
+                        <a href="#" data-toggle="tooltip" title="Gallery" class="listing-gallery"> <i class="fas fa-camera"></i> </a>
+                     </div>
+                  </div>
+               </div>
+               <!-- Listing End -->
+               <!-- Listing Start -->
+               <div class="listing">
+                  <div class="listing-thumbnail">
+                     <a href="listing-details-v1.html"><img src="{% static 'img/listings/4.jpg' %}" alt="listing"></a>
+                     <div class="listing-badges">
+                        <span class="listing-badge sale">On Property</span>
+                     </div>
+                     <div class="listing-controls">
+                        <a href="#" class="favorite"><i class="far fa-heart"></i></a>
+                        <a href="#" class="compare"><i class="fas fa-sync-alt"></i></a>
+                     </div>
+                  </div>
+                  <div class="listing-body">
+                     <div class="listing-author">
+                        <img src="{% static 'img/people/2.jpg' %}" alt="author">
+                        <div class="listing-author-body">
+                           <p> <a href="#">Heather Mclayn</a> </p>
+                           <span class="listing-date">March 3, 2021</span>
+                        </div>
+                        <div class="dropdown options-dropdown">
+                           <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
+                           <div class="dropdown-menu dropdown-menu-right">
+                              <ul>
+                                 <li> <a href="tel:+123456789"> <i class="fas fa-phone"></i> Call Guide</a> </li>
+                                 <li> <a href="mailto:+123456789"> <i class="fas fa-envelope"></i> Send Message</a> </li>
+                                 <li> <a href="listing-details-v1.html"> <i class="fas fa-bookmark"></i> Book Tour</a> </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <h5 class="listing-title"> <a href="listing-details-v1.html" title="Honeymoon Package">Honeymoon Package</a> </h5>
+                     <span class="listing-price">3,500$ <span>/Person</span> </span>
+                     <p class="listing-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                     <div class="acr-listing-icons">
+                        <div class="acr-listing-icon" data-toggle="tooltip" title="Hotel">
+                           <i class="flaticon-price-tags"></i>
+                           <span class="acr-listing-icon-value">3</span>
+                        </div>
+                        <div class="acr-listing-icon" data-toggle="tooltip" title="Guide">
+                           <i class="flaticon-tour-guide"></i>
+                           <span class="acr-listing-icon-value">2</span>
+                        </div>
+                        <div class="acr-listing-icon" data-toggle="tooltip" title="Tickets">
+                           <i class="flaticon-airplane"></i>
+                           <span class="acr-listing-icon-value">220</span>
+                        </div>
+                     </div>
+                     <div class="listing-gallery-wrapper">
+                        <a href="listing-details-v1.html" class="btn-custom btn-sm secondary">Package Details</a>
+                        <a href="#" data-toggle="tooltip" title="Gallery" class="listing-gallery"> <i class="fas fa-camera"></i> </a>
+                     </div>
+                  </div>
+               </div>
+               <!-- Listing End -->
+            </div>
+         </div>
+      </div>
+      <!-- Tours Slider End -->
+      <!-- Top Tours Start -->
+      <div class="section light-bg">
+         <div class="container top-listings">
+            <div class="acr-arrows">
+               <i class="slider-prev fas fa-arrow-left slick-arrow"></i>
+               <i class="slider-next fas fa-arrow-right slick-arrow"></i>
+            </div>
+            <div class="section-title-wrap section-header">
+               <h5 class="custom-primary">Trending</h5>
+               <h2 class="title">Our Top Property Planner </h2>
+            </div>
+            <div class="top-listings-slider">
+               <!-- Top Item Start -->
+               <div class="acr-top-listing-item bg-cover dark-overlay bg-center" style="background-image: url('{% static 'img/listings/1.jpg' %}')">
+                  <div class="row">
+                     <div class="col-lg-6">
+                        <div class="acr-top-listing-body listing">
+                           <div class="listing-body">
+                              <h5 class="listing-title"> <a href="listing-details-v1.html" title="Honeymoon Package" tabindex="0">Honeymoon Package</a> </h5>
+                              <div class="listing-author">
+                                 <img src="{% static 'img/people/2.jpg' %}" alt="author">
+                                 <div class="listing-author-body">
+                                    <p> <a href="#" tabindex="0">Heather Mclayn</a> </p>
+                                    <span class="listing-date">March 3, 2021</span>
+                                 </div>
+                                 <div class="dropdown options-dropdown">
+                                    <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0"><i class="fas fa-ellipsis-v"></i></a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                       <ul>
+                                          <li> <a href="tel:+123456789" tabindex="0"> <i class="fas fa-phone"></i> Call Guide</a> </li>
+                                          <li> <a href="mailto:+123456789" tabindex="0"> <i class="fas fa-envelope"></i> Send Message</a> </li>
+                                          <li> <a href="listing-details-v1.html" tabindex="0"> <i class="fas fa-bookmark"></i> Book Tour</a> </li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                              <span class="listing-price">3,500$ <span>/Person</span> </span>
+                              <p class="listing-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                              <div class="acr-listing-icons">
+                                 <div class="acr-listing-icon" data-toggle="tooltip" title="" data-original-title="Hotel">
+                                    <i class="flaticon-price-tags"></i>
+                                    <span class="acr-listing-icon-value">3</span>
+                                 </div>
+                                 <div class="acr-listing-icon" data-toggle="tooltip" title="" data-original-title="Guide">
+                                    <i class="flaticon-tour-guide"></i>
+                                    <span class="acr-listing-icon-value">2</span>
+                                 </div>
+                                 <div class="acr-listing-icon" data-toggle="tooltip" title="" data-original-title="Tickets">
+                                    <i class="flaticon-airplane"></i>
+                                    <span class="acr-listing-icon-value">220</span>
+                                 </div>
+                              </div>
+                              <div class="listing-gallery-wrapper">
+                                 <a href="listing-details-v1.html" class="btn-custom btn-sm secondary" tabindex="0">Package Details</a>
+                                 <a href="#" data-toggle="tooltip" title="" class="listing-gallery" tabindex="0" data-original-title="Gallery"> <i class="fas fa-camera"></i> </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- Top Item End -->
+               <!-- Top Item Start -->
+               <div class="acr-top-listing-item bg-cover dark-overlay bg-center" style="background-image: url('{% static 'img/listings/2.jpg' %}')">
+                  <div class="row">
+                     <div class="col-lg-6">
+                        <div class="acr-top-listing-body listing">
+                           <div class="listing-body">
+                              <h5 class="listing-title"> <a href="listing-details-v1.html" title="Honeymoon Package" tabindex="0">Honeymoon Package</a> </h5>
+                              <div class="listing-author">
+                                 <img src="{% static 'img/people/2.jpg' %}" alt="author">
+                                 <div class="listing-author-body">
+                                    <p> <a href="#" tabindex="0">Heather Mclayn</a> </p>
+                                    <span class="listing-date">March 3, 2021</span>
+                                 </div>
+                                 <div class="dropdown options-dropdown">
+                                    <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0"><i class="fas fa-ellipsis-v"></i></a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                       <ul>
+                                          <li> <a href="tel:+123456789" tabindex="0"> <i class="fas fa-phone"></i> Call Guide</a> </li>
+                                          <li> <a href="mailto:+123456789" tabindex="0"> <i class="fas fa-envelope"></i> Send Message</a> </li>
+                                          <li> <a href="listing-details-v1.html" tabindex="0"> <i class="fas fa-bookmark"></i> Book Tour</a> </li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                              <span class="listing-price">3,500$ <span>/Person</span> </span>
+                              <p class="listing-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                              <div class="acr-listing-icons">
+                                 <div class="acr-listing-icon" data-toggle="tooltip" title="" data-original-title="Hotel">
+                                    <i class="flaticon-price-tags"></i>
+                                    <span class="acr-listing-icon-value">3</span>
+                                 </div>
+                                 <div class="acr-listing-icon" data-toggle="tooltip" title="" data-original-title="Guide">
+                                    <i class="flaticon-tour-guide"></i>
+                                    <span class="acr-listing-icon-value">2</span>
+                                 </div>
+                                 <div class="acr-listing-icon" data-toggle="tooltip" title="" data-original-title="Tickets">
+                                    <i class="flaticon-airplane"></i>
+                                    <span class="acr-listing-icon-value">220</span>
+                                 </div>
+                              </div>
+                              <div class="listing-gallery-wrapper">
+                                 <a href="listing-details-v1.html" class="btn-custom btn-sm secondary" tabindex="0">Package Details</a>
+                                 <a href="#" data-toggle="tooltip" title="" class="listing-gallery" tabindex="0" data-original-title="Gallery"> <i class="fas fa-camera"></i> </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- Top Item End -->
+               <!-- Top Item Start -->
+               <div class="acr-top-listing-item bg-cover dark-overlay bg-center" style="background-image: url('{% static 'img/listings/3.jpg' %}')">
+                  <div class="row">
+                     <div class="col-lg-6">
+                        <div class="acr-top-listing-body listing">
+                           <div class="listing-body">
+                              <h5 class="listing-title"> <a href="listing-details-v1.html" title="Honeymoon Package" tabindex="0">Honeymoon Package</a> </h5>
+                              <div class="listing-author">
+                                 <img src="{% static 'img/people/2.jpg' %}" alt="author">
+                                 <div class="listing-author-body">
+                                    <p> <a href="#" tabindex="0">Heather Mclayn</a> </p>
+                                    <span class="listing-date">March 3, 2021</span>
+                                 </div>
+                                 <div class="dropdown options-dropdown">
+                                    <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="0"><i class="fas fa-ellipsis-v"></i></a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                       <ul>
+                                          <li> <a href="tel:+123456789" tabindex="0"> <i class="fas fa-phone"></i> Call Guide</a> </li>
+                                          <li> <a href="mailto:+123456789" tabindex="0"> <i class="fas fa-envelope"></i> Send Message</a> </li>
+                                          <li> <a href="listing-details-v1.html" tabindex="0"> <i class="fas fa-bookmark"></i> Book Tour</a> </li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                              <span class="listing-price">3,500$ <span>/Person</span> </span>
+                              <p class="listing-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                              <div class="acr-listing-icons">
+                                 <div class="acr-listing-icon" data-toggle="tooltip" title="" data-original-title="Hotel">
+                                    <i class="flaticon-price-tags"></i>
+                                    <span class="acr-listing-icon-value">3</span>
+                                 </div>
+                                 <div class="acr-listing-icon" data-toggle="tooltip" title="" data-original-title="Guide">
+                                    <i class="flaticon-tour-guide"></i>
+                                    <span class="acr-listing-icon-value">2</span>
+                                 </div>
+                                 <div class="acr-listing-icon" data-toggle="tooltip" title="" data-original-title="Tickets">
+                                    <i class="flaticon-airplane"></i>
+                                    <span class="acr-listing-icon-value">220</span>
+                                 </div>
+                              </div>
+                              <div class="listing-gallery-wrapper">
+                                 <a href="listing-details-v1.html" class="btn-custom btn-sm secondary" tabindex="0">Package Details</a>
+                                 <a href="#" data-toggle="tooltip" title="" class="listing-gallery" tabindex="0" data-original-title="Gallery"> <i class="fas fa-camera"></i> </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- Top Item End -->
+            </div>
+         </div>
+      </div>
+      <!-- Top Tours End -->
+      <!-- Single Agent Start -->
+      <div class="section">
+         <div class="container">
+            <div class="acr-single-agent">
+               <div class="acr-single-agent-thumb">
+                  <img src="{% static 'img/person.png' %}" alt="agent">
+                  <div class="transparent-square">
+                     <div></div>
+                  </div>
+               </div>
+               <div class="acr-single-agent-body">
+                  <h3>Agent Of The Month</h3>
+                  <p>
+                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                     galley of type and scrambled it to make a type specimen book. It has survived not only five centuries
+                  </p>
+                  <div class="acr-single-agent-meta">
+                     <h5>Jonathan Blue</h5>
+                     <span>Agent at Company</span>
+                  </div>
+                  <div class="acr-rating">
+                     <i class="fas fa-star active"></i>
+                     <i class="fas fa-star active"></i>
+                     <i class="fas fa-star active"></i>
+                     <i class="fas fa-star active"></i>
+                     <i class="fas fa-star active"></i>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Single Agent End -->
+      <!-- Agents Start -->
+      <div class="section pt-0 agents">
+         <div class="container">
+            <div class="section-title-wrap section-header flex-header">
+               <div class="section-title-text">
+                  <h5 class="custom-primary">Our Back bone</h5>
+                  <h2 class="title">Meet Our Guides</h2>
+               </div>
+               <div class="acr-arrows primary-arrows">
+                  <i class="slider-prev fas fa-arrow-left slick-arrow"></i>
+                  <i class="slider-next fas fa-arrow-right slick-arrow"></i>
+               </div>
+            </div>
+            <div class="agents-slider">
+               <!-- Agent Start -->
+               <div class="acr-agent">
+                  <div class="listing-badge featured">
+                     <i class="fas fa-star"></i>
+                  </div>
+                  <div class="acr-dots-wrapper acr-agent-thumb">
+                     <div class="acr-dots"></div>
+                     <a href="guide-details.html"><img src="{% static 'img/agents/1.jpg' %}" alt="agent"></a>
+                  </div>
+                  <div class="acr-agent-body">
+                     <h6> <a href="guide-details.html">Randy Blue</a> </h6>
+                     <span>Expert at Company</span>
+                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                     <a href="guide-details.html" class="btn-custom secondary btn-sm">View Profile</a>
+                  </div>
+               </div>
+               <!-- Agent End -->
+               <!-- Agent Start -->
+               <div class="acr-agent">
+                  <div class="acr-dots-wrapper acr-agent-thumb">
+                     <div class="acr-dots"></div>
+                     <a href="guide-details.html"><img src="{% static 'img/agents/2.jpg' %}" alt="agent"></a>
+                  </div>
+                  <div class="acr-agent-body">
+                     <h6> <a href="guide-details.html">Rinda Flow</a> </h6>
+                     <span>Expert at Company</span>
+                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                     <a href="guide-details.html" class="btn-custom secondary btn-sm">View Profile</a>
+                  </div>
+               </div>
+               <!-- Agent End -->
+               <!-- Agent Start -->
+               <div class="acr-agent">
+                  <div class="acr-dots-wrapper acr-agent-thumb">
+                     <div class="acr-dots"></div>
+                     <a href="guide-details.html"><img src="{% static 'img/agents/3.jpg' %}" alt="agent"></a>
+                  </div>
+                  <div class="acr-agent-body">
+                     <h6> <a href="guide-details.html">Gina Mconihon</a> </h6>
+                     <span>Expert at Company</span>
+                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                     <a href="guide-details.html" class="btn-custom secondary btn-sm">View Profile</a>
+                  </div>
+               </div>
+               <!-- Agent End -->
+               <!-- Agent Start -->
+               <div class="acr-agent">
+                  <div class="listing-badge featured">
+                     <i class="fas fa-star"></i>
+                  </div>
+                  <div class="acr-dots-wrapper acr-agent-thumb">
+                     <div class="acr-dots"></div>
+                     <a href="guide-details.html"><img src="{% static 'img/agents/4.jpg' %}" alt="agent"></a>
+                  </div>
+                  <div class="acr-agent-body">
+                     <h6> <a href="guide-details.html">Oliver Rasky</a> </h6>
+                     <span>Expert at Company</span>
+                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                     <a href="guide-details.html" class="btn-custom secondary btn-sm">View Profile</a>
+                  </div>
+               </div>
+               <!-- Agent End -->
+            </div>
+         </div>
+      </div>
+      <!-- Agents End -->
+      <!-- Blog Posts Start -->
+      <div class="section section-padding light-bg">
+         <div class="container">
+            <div class="section-title-wrap section-header">
+               <h5 class="custom-primary">Latest News</h5>
+               <h2 class="title">From Our Blog</h2>
+            </div>
+            <div class="row">
+               <div class="col-lg-6">
+                  <article class="post">
+                     <div class="post-thumbnail">
+                        <a href="blog-single.html"><img src="{% static 'img/blog/1.jpg' %}" alt="blog post"></a>
+                     </div>
+                     <div class="post-body">
+                        <h5 class="post-title"> <a href="blog-single.html">Why More Travelers Are Purchasing Travel Insurance This Year</a> </h5>
+                        <p class="post-text">
+                           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                        </p>
+                        <div class="post-controls">
+                           <a href="#" class="btn-custom secondary btn-sm">Read More</a>
+                           <div class="post-comment-authors">
+                              <span>Comments by: </span>
+                              <div class="post-comment-authors-img">
+                                 <a href="#"> <img src="{% static 'img/people/3.jpg' %}" alt="comment author"> </a>
+                                 <a href="#"> <img src="{% static 'img/people/4.jpg' %}" alt="comment author"> </a>
+                                 <a href="#"> +3 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </article>
+               </div>
+               <div class="col-lg-6">
+                  <article class="post post-list">
+                     <div class="post-thumbnail">
+                        <a href="blog-single.html"><img src="{% static 'img/blog/2.jpg' %}" alt="blog post"></a>
+                     </div>
+                     <div class="post-body">
+                        <h5 class="post-title"> <a href="blog-single.html">Nicola Butler's 13-day Trip to London and the English Countryside</a> </h5>
+                        <p class="post-text">
+                           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                        </p>
+                     </div>
+                  </article>
+                  <article class="post post-list">
+                     <div class="post-thumbnail">
+                        <a href="blog-single.html"><img src="{% static 'img/blog/3.jpg' %}" alt="blog post"></a>
+                     </div>
+                     <div class="post-body">
+                        <h5 class="post-title"> <a href="blog-single.html">Christos Stergiou's 16 - day Greece Itinerary</a> </h5>
+                        <p class="post-text">
+                           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                        </p>
+                     </div>
+                  </article>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Blog Posts End -->
+      <!-- Testimonials Start -->
+      <div class="section section-padding">
+         <div class="container">
+            <div class="section-title-wrap section-header">
+               <h5 class="custom-primary">Testimonials</h5>
+               <h2 class="title">What Are People Saying</h2>
+            </div>
+            <div class="sigma_testimonial-slider">
+               <div class="sigma_testimonial style-4">
+                  <div class="sigma_testimonial-body">
+                     <div class="sigma_testimonial-inner">
+                        <div class="d-flex align-items-center">
+                           <div class="sigma_testimonial-thumb">
+                              <img src="{% static 'img/people/1.jpg' %}" alt="testimonial">
+                           </div>
+                           <div class="sigma_author-block">
+                              <h5>
+                                 Aash Aron
+                              </h5>
+                              <span class="sigma_testimonial-category">Web Designer</span>
+                           </div>
+                        </div>
+                        <i class="fab fa-facebook-f sigma_testimonial-icon"></i>
+                     </div>
+                     <p>"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."</p>
+                  </div>
+               </div>
+               <div class="sigma_testimonial style-4">
+                  <div class="sigma_testimonial-body">
+                     <div class="sigma_testimonial-inner">
+                        <div class="d-flex align-items-center">
+                           <div class="sigma_testimonial-thumb">
+                              <img src="{% static 'img/people/2.jpg' %}" alt="testimonial">
+                           </div>
+                           <div class="sigma_author-block">
+                              <h5>
+                                 John Mishlen
+                              </h5>
+                              <span class="sigma_testimonial-category">CEO</span>
+                           </div>
+                        </div>
+                        <i class="fab fa-twitter sigma_testimonial-icon"></i>
+                     </div>
+                     <p>"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."</p>
+                  </div>
+               </div>
+               <div class="sigma_testimonial style-4">
+                  <div class="sigma_testimonial-body">
+                     <div class="sigma_testimonial-inner">
+                        <div class="d-flex align-items-center">
+                           <div class="sigma_testimonial-thumb">
+                              <img src="{% static 'img/people/3.jpg' %}" alt="testimonial">
+                           </div>
+                           <div class="sigma_author-block">
+                              <h5>
+                                 Moe Sondi
+                              </h5>
+                              <span class="sigma_testimonial-category">UI Designer</span>
+                           </div>
+                        </div>
+                        <i class="fab fa-linkedin-in sigma_testimonial-icon"></i>
+                     </div>
+                     <p>"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."</p>
+                  </div>
+               </div>
+               <div class="sigma_testimonial style-4">
+                  <div class="sigma_testimonial-body">
+                     <div class="sigma_testimonial-inner">
+                        <div class="d-flex align-items-center">
+                           <div class="sigma_testimonial-thumb">
+                              <img src="{% static 'img/people/4.jpg' %}" alt="testimonial">
+                           </div>
+                           <div class="sigma_author-block">
+                              <h5>
+                                 Aash Aron
+                              </h5>
+                              <span class="sigma_testimonial-category">Web Designer</span>
+                           </div>
+                        </div>
+                        <i class="fab fa-facebook-f sigma_testimonial-icon"></i>
+                     </div>
+                     <p>"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Testimonials End -->
+      <!-- CTA Start -->
+      <div class="section pt-0">
+         <div class="container">
+            <div class="cta cta-1">
+               <div class="row align-items-center">
+                  <div class="col-lg-4">
+                     <h3>Need More Information On Property Tools?</h3>
+                  </div>
+                  <div class="offset-lg-1 col-lg-7">
+                     <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled.
+                     </p>
+                     <a href="#" class="btn-custom-2 light">Find Out More</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- CTA End -->
+      <!-- Instagram Start -->
+      <div class="insta style-5">
+         <div class="insta-text">
+            <i class="fab fa-instagram"></i>
+            <p>Follow Us On Insta</p>
+         </div>
+         <div class="container-fluid p-0">
+            <div class="row no-gutters">
+               <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+                  <a href="#" class="ct-ig-item">
+                  <img src="{% static 'img/gallery/1.jpg' %}" alt="ig">
+                  </a>
+               </div>
+               <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+                  <a href="#" class="ct-ig-item">
+                  <img src="{% static 'img/gallery/2.jpg' %}" alt="ig">
+                  </a>
+               </div>
+               <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+                  <a href="#" class="ct-ig-item">
+                  <img src="{% static 'img/gallery/3.jpg' %}" alt="ig">
+                  </a>
+               </div>
+               <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+                  <a href="#" class="ct-ig-item">
+                  <img src="{% static 'img/gallery/4.jpg' %}" alt="ig">
+                  </a>
+               </div>
+               <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+                  <a href="#" class="ct-ig-item">
+                  <img src="{% static 'img/gallery/5.jpg' %}" alt="ig">
+                  </a>
+               </div>
+               <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+                  <a href="#" class="ct-ig-item">
+                  <img src="{% static 'img/gallery/6.jpg' %}" alt="ig">
+                  </a>
+               </div>
+               <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+                  <a href="#" class="ct-ig-item">
+                  <img src="{% static 'img/gallery/7.jpg' %}" alt="ig">
+                  </a>
+               </div>
+               <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+                  <a href="#" class="ct-ig-item">
+                  <img src="{% static 'img/gallery/8.jpg' %}" alt="ig">
+                  </a>
+               </div>
+               <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+                  <a href="#" class="ct-ig-item">
+                  <img src="{% static 'img/gallery/4.jpg' %}" alt="ig">
+                  </a>
+               </div>
+               <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+                  <a href="#" class="ct-ig-item">
+                  <img src="{% static 'img/gallery/1.jpg' %}" alt="ig">
+                  </a>
+               </div>
+               <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+                  <a href="#" class="ct-ig-item">
+                  <img src="{% static 'img/gallery/6.jpg' %}" alt="ig">
+                  </a>
+               </div>
+               <div class="col-lg-2 col-md-4 col-sm-4 col-6">
+                  <a href="#" class="ct-ig-item">
+                  <img src="{% static 'img/gallery/2.jpg' %}" alt="ig">
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Instagram End -->
+      <!-- Footer Start -->
+      <footer class="sigma_footer style-2">
+         <div class="container">
+            <div class="sigma_footer-top">
+               <div class="sigma_footer-logo">
+                  <img src="{% static 'img/logo.png' %}" alt="logo">
+               </div>
+               <div class="footer-item">
+                  <ul class="sigma_footer-links">
+                     <li>
+                        <a href="index.html">Home</a>
+                     </li>
+                     <li>
+                        <a href="about-us.html">About</a>
+                     </li>
+                     <li>
+                        <a href="blog-grid.html">Blog</a>
+                     </li>
+                     <li>
+                        <a href="contact-us.html">Contact</a>
+                     </li>
+                  </ul>
+               </div>
+               <div class="footer-item">
+                  <ul class="social-media">
+                     <li>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                     </li>
+                     <li>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                     </li>
+                     <li>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="sigma_footer-bottom">
+               <div class="sigma_footer-copyright">
+                  <p class="mb-0"> &copy; Startours -
+                     <a href="#">2021,</a>
+                     Made With Love
+                  </p>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- Footer End -->
+      <!-- Vendor Scripts -->
+      <script src="{% static 'js/plugins/jquery-3.4.1.min.js' %}"></script>
+      <script src="{% static 'js/plugins/popper.min.js' %}"></script>
+      <script src="{% static 'js/plugins/bootstrap.min.js' %}"></script>
+      <script src="{% static 'js/plugins/bootstrap-datepicker.min.js' %}"></script>
+      <script src="{% static 'js/plugins/jquery.magnific-popup.min.js' %}"></script>
+      <script src="{% static 'js/plugins/jquery.slimScroll.min.js' %}"></script>
+      <script src="{% static 'js/plugins/imagesloaded.min.js' %}"></script>
+      <script src="{% static 'js/plugins/jquery.countdown.min.js' %}"></script>
+      <script src="{% static 'js/plugins/isotope.pkgd.min.js' %}"></script>
+      <script src="{% static 'js/plugins/slick.min.js' %}"></script>
+      <script src="{% static 'js/plugins/select2.min.js' %}"></script>
+      <!-- Tours Scripts -->
+      <script src="{% static 'js/main.js' %}"></script>
+   </body>
+</html>
