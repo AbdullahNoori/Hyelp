@@ -7,3 +7,8 @@ def index(request):
     print(yelp.search("barber", "nyc"))
     return render(request, 'app/home-v2.html')
     # return HttpResponse("Hello, world. You're at the polls index.")
+
+def detail(request):
+    yelp = YelpAPI()
+    print(yelp.search("barber", "nyc"))
+    return render(request, 'app/detail.html')
