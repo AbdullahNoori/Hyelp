@@ -53,9 +53,11 @@
             <p class="subtitle">Thousands of packages which can bring happiness to your life , Don't miss your chance to grab your dream tour plan.</p>
           </div>
           <div class="banner-newsletter">
-            <form method="post">
-              <input type="text" placeholder="Search for keywords..." class="form-control" name="email-newsletter" value="" style="width: 450px;">
-              <button type="submit" class="btn-custom secondary" name="button" style="width: 250px;">Search</button>
+            <form  action="{% url 'search' %}" method="get">
+              {% csrf_token %}
+              <input type="text" placeholder="Keywords ..." class="form-control" name="query" value="" style="width: 225px;">
+              <input type="text" placeholder="Location ..." class="form-control" name="location" value="" style="width: 225px;">
+              <button type="submit" class="btn-custom secondary" name="button" style="width: 200px;">Search</button>
             </form>
             <!-- <span>*We will be sending you two emails per month about offers and exclusive listings</span> -->
           </div>
@@ -423,13 +425,14 @@
         <!-- Posts Start -->
         <div class="col-lg-8">
 
+          {% for business in data %}
           <!-- Listing Start -->
           <div class="listing listing-list">
             <div class="listing-thumbnail">
-              <a href="listing-details-v1.html"><img src="{% static 'img/listings-list/8.jpg' %}" alt="listing"></a>
+              <a href="{{business.url}}"><img src="{{business.image_url}}" alt="listing"></a>
               <div class="listing-badges">
                 <span class="listing-badge featured"> <i class="fas fa-star"></i> </span>
-                <span class="listing-badge pending"> Pending</span>
+                <span class="listing-badge pending"> {{business.rating}}</span>
               </div>
               <div class="listing-controls">
                 <a href="#" class="favorite"><i class="far fa-heart"></i></a>
@@ -454,196 +457,39 @@
                   </div>
                 </div>
               </div>
-              <h5 class="listing-title"> <a href="listing-details-v1.html" title="Honeymoon Package">Honeymoon Package</a> </h5>
-              <span class="listing-price">3,500$ <span>/Person</span> </span>
-              <p class="listing-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              <h5 class="listing-title"> <a href="{{business.url}}" title="{{business.name}}">{{business.name}}</a> </h5>
+              <span class="listing-price">{{business.price}} <span>/Person</span> </span>
+              <p class="listing-text">{{business.location.address1}} {{business.location.address2}} {{business.location.address3}}
+                  {{business.location.city}}, {{business.location.state}} {{business.location.zip_code}}
+              </p>
               <div class="acr-listing-icons">
-                <div class="acr-listing-icon" data-toggle="tooltip" title="Hotel">
-                  <i class="flaticon-price-tags"></i>
-                  <span class="acr-listing-icon-value">3</span>
+                <div class="acr-listing-icon" data-toggle="tooltip" title="Hours">
+                  {% if business.is_closed %}
+                    <!-- <i class="fa fa-close"></i> -->
+                    <span class="acr-listing-icon-value">Close</span>
+                  {% else %}
+                    <!-- <i class="fa fa-close"></i> -->
+                    <span class="acr-listing-icon-value">Open</span>
+                  {% endif %}
                 </div>
                 <div class="acr-listing-icon" data-toggle="tooltip" title="Guide">
-                  <i class="flaticon-tour-guide"></i>
-                  <span class="acr-listing-icon-value">2</span>
+                  <i class="flaticon-reviews"></i>
+                  <span class="acr-listing-icon-value">{{business.review_count}} Review</span>
                 </div>
-                <div class="acr-listing-icon" data-toggle="tooltip" title="Tickets">
+                <!-- <div class="acr-listing-icon" data-toggle="tooltip" title="Tickets">
                   <i class="flaticon-airplane"></i>
                   <span class="acr-listing-icon-value">220</span>
-                </div>
+                </div> -->
               </div>
               <div class="listing-gallery-wrapper">
-                <a href="listing-details-v1.html" class="btn-custom btn-sm secondary">Package Details</a>
+                <a href="{{business.url}}" class="btn-custom btn-sm secondary">Business Details</a>
                 <a href="#" data-toggle="tooltip" title="Gallery" class="listing-gallery"> <i class="fas fa-camera"></i> </a>
               </div>
             </div>
           </div>
           <!-- Listing End -->
-
-          <!-- Listing Start -->
-          <div class="listing listing-list">
-            <div class="listing-thumbnail">
-              <a href="listing-details-v1.html"><img src="{% static 'img/listings-list/2.jpg' %}" alt="listing"></a>
-              <div class="listing-badges">
-                <span class="listing-badge featured"> <i class="fas fa-star"></i> </span>
-                <span class="listing-badge sale"> On Property</span>
-              </div>
-              <div class="listing-controls">
-                <a href="#" class="favorite"><i class="far fa-heart"></i></a>
-                <a href="#" class="compare"><i class="fas fa-sync-alt"></i></a>
-              </div>
-            </div>
-            <div class="listing-body">
-              <div class="listing-author">
-                <img src="{% static 'img/people/1.jpg' %}" alt="author">
-                <div class="listing-author-body">
-                  <p> <a href="#">Randy Blue</a> </p>
-                  <span class="listing-date">March 3, 2021</span>
-                </div>
-                <div class="dropdown options-dropdown">
-                  <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
-                  <div class="dropdown-menu dropdown-menu-right">
-                    <ul>
-                      <li> <a href="tel:+123456789"> <i class="fas fa-phone"></i> Call Guide</a> </li>
-                      <li> <a href="mailto:+123456789"> <i class="fas fa-envelope"></i> Send Message</a> </li>
-                      <li> <a href="listing-details-v1.html"> <i class="fas fa-bookmark"></i> Book Tour</a> </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <h5 class="listing-title"> <a href="listing-details-v1.html" title="7 Wonders Package ">7 Wonders Package </a> </h5>
-              <span class="listing-price">2,300$ <span>/Person</span> </span>
-              <p class="listing-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-              <div class="acr-listing-icons">
-                <div class="acr-listing-icon" data-toggle="tooltip" title="Hotel">
-                  <i class="flaticon-price-tags"></i>
-                  <span class="acr-listing-icon-value">2</span>
-                </div>
-                <div class="acr-listing-icon" data-toggle="tooltip" title="Guide">
-                  <i class="flaticon-tour-guide"></i>
-                  <span class="acr-listing-icon-value">1</span>
-                </div>
-                <div class="acr-listing-icon" data-toggle="tooltip" title="Tickets">
-                  <i class="flaticon-airplane"></i>
-                  <span class="acr-listing-icon-value">280</span>
-                </div>
-              </div>
-              <div class="listing-gallery-wrapper">
-                <a href="listing-details-v1.html" class="btn-custom btn-sm secondary">Package Details</a>
-                <a href="#" data-toggle="tooltip" title="Gallery" class="listing-gallery"> <i class="fas fa-camera"></i> </a>
-              </div>
-            </div>
-          </div>
-          <!-- Listing End -->
-
-          <!-- Listing Start -->
-          <div class="listing listing-list">
-            <div class="listing-thumbnail">
-              <a href="listing-details-v1.html"><img src="{% static 'img/listings-list/3.jpg' %}" alt="listing"></a>
-              <div class="listing-badges">
-                <span class="listing-badge pending"> Pending</span>
-              </div>
-              <div class="listing-controls">
-                <a href="#" class="favorite"><i class="far fa-heart"></i></a>
-                <a href="#" class="compare"><i class="fas fa-sync-alt"></i></a>
-              </div>
-            </div>
-            <div class="listing-body">
-              <div class="listing-author">
-                <img src="{% static 'img/people/2.jpg' %}" alt="author">
-                <div class="listing-author-body">
-                  <p> <a href="#">Heather Mclayn</a> </p>
-                  <span class="listing-date">March 3, 2021</span>
-                </div>
-                <div class="dropdown options-dropdown">
-                  <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
-                  <div class="dropdown-menu dropdown-menu-right">
-                    <ul>
-                      <li> <a href="tel:+123456789"> <i class="fas fa-phone"></i> Call Guide</a> </li>
-                      <li> <a href="mailto:+123456789"> <i class="fas fa-envelope"></i> Send Message</a> </li>
-                      <li> <a href="listing-details-v1.html"> <i class="fas fa-bookmark"></i> Book Tour</a> </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <h5 class="listing-title"> <a href="listing-details-v1.html" title="Honeymoon Package">Honeymoon Package</a> </h5>
-              <span class="listing-price">3,500$ <span>/Person</span> </span>
-              <p class="listing-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-              <div class="acr-listing-icons">
-                <div class="acr-listing-icon" data-toggle="tooltip" title="Hotel">
-                  <i class="flaticon-price-tags"></i>
-                  <span class="acr-listing-icon-value">3</span>
-                </div>
-                <div class="acr-listing-icon" data-toggle="tooltip" title="Guide">
-                  <i class="flaticon-tour-guide"></i>
-                  <span class="acr-listing-icon-value">2</span>
-                </div>
-                <div class="acr-listing-icon" data-toggle="tooltip" title="Tickets">
-                  <i class="flaticon-airplane"></i>
-                  <span class="acr-listing-icon-value">220</span>
-                </div>
-              </div>
-              <div class="listing-gallery-wrapper">
-                <a href="listing-details-v1.html" class="btn-custom btn-sm secondary">Package Details</a>
-                <a href="#" data-toggle="tooltip" title="Gallery" class="listing-gallery"> <i class="fas fa-camera"></i> </a>
-              </div>
-            </div>
-          </div>
-          <!-- Listing End -->
-
-          <!-- Listing Start -->
-          <div class="listing listing-list">
-            <div class="listing-thumbnail">
-              <a href="listing-details-v1.html"><img src="{% static 'img/listings-list/4.jpg' %}" alt="listing"></a>
-              <div class="listing-badges">
-                <span class="listing-badge sale">On Property</span>
-              </div>
-              <div class="listing-controls">
-                <a href="#" class="favorite"><i class="far fa-heart"></i></a>
-                <a href="#" class="compare"><i class="fas fa-sync-alt"></i></a>
-              </div>
-            </div>
-            <div class="listing-body">
-              <div class="listing-author">
-                <img src="{% static 'img/people/2.jpg' %}" alt="author">
-                <div class="listing-author-body">
-                  <p> <a href="#">Heather Mclayn</a> </p>
-                  <span class="listing-date">March 3, 2021</span>
-                </div>
-                <div class="dropdown options-dropdown">
-                  <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
-                  <div class="dropdown-menu dropdown-menu-right">
-                    <ul>
-                      <li> <a href="tel:+123456789"> <i class="fas fa-phone"></i> Call Guide</a> </li>
-                      <li> <a href="mailto:+123456789"> <i class="fas fa-envelope"></i> Send Message</a> </li>
-                      <li> <a href="listing-details-v1.html"> <i class="fas fa-bookmark"></i> Book Tour</a> </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <h5 class="listing-title"> <a href="listing-details-v1.html" title="Honeymoon Package">Honeymoon Package</a> </h5>
-              <span class="listing-price">3,500$ <span>/Person</span> </span>
-              <p class="listing-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-              <div class="acr-listing-icons">
-                <div class="acr-listing-icon" data-toggle="tooltip" title="Hotel">
-                  <i class="flaticon-price-tags"></i>
-                  <span class="acr-listing-icon-value">3</span>
-                </div>
-                <div class="acr-listing-icon" data-toggle="tooltip" title="Guide">
-                  <i class="flaticon-tour-guide"></i>
-                  <span class="acr-listing-icon-value">2</span>
-                </div>
-                <div class="acr-listing-icon" data-toggle="tooltip" title="Tickets">
-                  <i class="flaticon-airplane"></i>
-                  <span class="acr-listing-icon-value">220</span>
-                </div>
-              </div>
-              <div class="listing-gallery-wrapper">
-                <a href="listing-details-v1.html" class="btn-custom btn-sm secondary">Package Details</a>
-                <a href="#" data-toggle="tooltip" title="Gallery" class="listing-gallery"> <i class="fas fa-camera"></i> </a>
-              </div>
-            </div>
-          </div>
-          <!-- Listing End -->
+          {% endfor %}
+          
 
         </div>
         <!-- Posts End -->
