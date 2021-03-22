@@ -441,39 +441,39 @@
             </div>
             <div class="listing-body">
               <div class="listing-author">
-                <img src="{% static 'img/people/2.jpg' %}" alt="author">
-                <div class="listing-author-body">
-                  <p> <a href="#">Heather Mclayn</a> </p>
-                  <span class="listing-date">March 3, 2021</span>
-                </div>
+                
                 <div class="dropdown options-dropdown">
                   <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
                   <div class="dropdown-menu dropdown-menu-right">
                     <ul>
-                      <li> <a href="tel:+123456789"> <i class="fas fa-phone"></i> Call Guide</a> </li>
-                      <li> <a href="mailto:+123456789"> <i class="fas fa-envelope"></i> Send Message</a> </li>
-                      <li> <a href="listing-details-v1.html"> <i class="fas fa-bookmark"></i> Book Tour</a> </li>
+                      <li> <a href="tel:{{business.phone}}"> <i class="fas fa-phone"></i> Call </a> </li>
+                      <li> <a href="mailto:{{business.phone}}"> <i class="fas fa-envelope"></i> Send Message</a> </li>
+                      <li> <a href="{{business.url}}"> <i class="fas fa-eye"></i> View Business</a> </li>
                     </ul>
                   </div>
                 </div>
               </div>
               <h5 class="listing-title"> <a href="{{business.url}}" title="{{business.name}}">{{business.name}}</a> </h5>
-              <span class="listing-price">{{business.price}} <span>/Person</span> </span>
+              {% if business.price %}
+                <span class="listing-price">{{business.price}} </span>
+              {% endif %}
               <p class="listing-text">{{business.location.address1}} {{business.location.address2}} {{business.location.address3}}
-                  {{business.location.city}}, {{business.location.state}} {{business.location.zip_code}}
+              
+                <br>
+                {{business.location.city}}, {{business.location.state}} {{business.location.zip_code}}
               </p>
               <div class="acr-listing-icons">
                 <div class="acr-listing-icon" data-toggle="tooltip" title="Hours">
                   {% if business.is_closed %}
-                    <!-- <i class="fa fa-close"></i> -->
+                    <i class="fa fa-store"></i>
                     <span class="acr-listing-icon-value">Close</span>
                   {% else %}
-                    <!-- <i class="fa fa-close"></i> -->
+                    <i class="fa fa-store"></i>
                     <span class="acr-listing-icon-value">Open</span>
                   {% endif %}
                 </div>
                 <div class="acr-listing-icon" data-toggle="tooltip" title="Guide">
-                  <i class="flaticon-reviews"></i>
+                  <i class="fas fa-star"></i>
                   <span class="acr-listing-icon-value">{{business.review_count}} Review</span>
                 </div>
                 <!-- <div class="acr-listing-icon" data-toggle="tooltip" title="Tickets">
@@ -483,7 +483,7 @@
               </div>
               <div class="listing-gallery-wrapper">
                 <a href="{{business.url}}" class="btn-custom btn-sm secondary">Business Details</a>
-                <a href="#" data-toggle="tooltip" title="Gallery" class="listing-gallery"> <i class="fas fa-camera"></i> </a>
+                <!-- <a href="#" data-toggle="tooltip" title="Gallery" class="listing-gallery"> <i class="fas fa-camera"></i> </a> -->
               </div>
             </div>
           </div>
