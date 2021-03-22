@@ -24,6 +24,13 @@ class YelpAPI:
         res = requests.get(url, headers = self.headers)
         return json.loads(res.text)
 
+    def category(self, query):
+        """ search for business reviews by business id """
+        
+        url = "https://api.yelp.com/v3/categories/{}".format(query)
+        res = requests.get(url, headers = self.headers)
+        return json.loads(res.text)
+
 
 
     
