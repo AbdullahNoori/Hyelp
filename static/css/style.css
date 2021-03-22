@@ -436,7 +436,7 @@ img {
   background-position: bottom;
 }
 .light-bg{
-  background-color: #f7f9fc;
+  background-color: #c1c3c5;
 }
 .primary-bg{
   background-color: #519fff;
@@ -1575,7 +1575,7 @@ table img{
   padding: 10px 0;
 }
 .sigma_header .sigma_logo-wrapper .sigma_logo{
-  max-width: 130px;
+  max-width: 530px;
 }
 
 .sigma_header .navbar-nav {
