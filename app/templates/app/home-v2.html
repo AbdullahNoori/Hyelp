@@ -65,74 +65,31 @@
           <!-- Featured Tours Start -->
           <div class="acr-featured-listings banner-featured-slider">
 
+            {% for business in featured_businesses %}
             <div class="acr-featured-listing">
               <div class="featured-listing-thumb">
-                <a href="listing-details-v1.html"><img src="{% static 'img/featured-listings/1.jpg' %}" alt="listing"></a>
+                <a href="{{business.url}}"><img src="{{business.image_url}}" alt="{{business.name}}"></a>
                 <div class="featured-listing-controls">
                   <span>Featured</span>
-                  <a href="#"><i class="far fa-heart"></i></a>
+                  <!-- <a href="#"><i class="far fa-heart"></i></a> -->
                 </div>
               </div>
               <div class="featured-listing-content">
-                <h6>3,000$/Person</h6>
+                {% if business.price %}
+                <h6>{{business.price}}</h6>
+                {% endif %}
                 <div class="featured-listing-meta">
-                  <p>Hotel 3, Guide 4, 3000  Flights</p>
+                  <p>{{business.name}}</p>
                 </div>
-                <span> <i class="fas fa-map-marker-alt"></i> Honeymoon Package</span>
+                <span> <i class="fas fa-map-marker-alt"></i> 
+                  {{business.location.address1}} {{business.location.address2}} {{business.location.address3}}
+                  {{business.location.city}}, {{business.location.state}} {{business.location.zip_code}}
+                </span>
               </div>
             </div>
 
-            <div class="acr-featured-listing">
-              <div class="featured-listing-thumb">
-                <a href="listing-details-v1.html"><img src="{% static 'img/featured-listings/2.jpg' %}" alt="listing"></a>
-                <div class="featured-listing-controls">
-                  <span>Featured</span>
-                  <a href="#"><i class="far fa-heart"></i></a>
-                </div>
-              </div>
-              <div class="featured-listing-content">
-                <h6>1,000$/Person</h6>
-                <div class="featured-listing-meta">
-                  <p>Hotel 2, Guide 1, 1200  Flights</p>
-                </div>
-                <span><i class="fas fa-map-marker-alt"></i> Honeymoon Package</span>
-              </div>
-            </div>
-
-            <div class="acr-featured-listing">
-              <div class="featured-listing-thumb">
-                <a href="listing-details-v1.html"><img src="{% static 'img/featured-listings/3.jpg' %}" alt="listing"></a>
-                <div class="featured-listing-controls">
-                  <span>Featured</span>
-                  <a href="#"><i class="far fa-heart"></i></a>
-                </div>
-              </div>
-              <div class="featured-listing-content">
-                <h6>1,200$/Person</h6>
-                <div class="featured-listing-meta">
-                  <p>Hotel 2, Guide 2, 1850  Flights</p>
-                </div>
-                <span><i class="fas fa-map-marker-alt"></i> Honeymoon Package</span>
-              </div>
-            </div>
-
-            <div class="acr-featured-listing">
-              <div class="featured-listing-thumb">
-                <a href="listing-details-v1.html"><img src="{% static 'img/featured-listings/4.jpg' %}" alt="listing"></a>
-                <div class="featured-listing-controls">
-                  <span>Featured</span>
-                  <a href="#"><i class="far fa-heart"></i></a>
-                </div>
-              </div>
-              <div class="featured-listing-content">
-                <h6>2,100$/Person</h6>
-                <div class="featured-listing-meta">
-                  <p>Hotel 3, Guide 3, 2300  Flights</p>
-                </div>
-                <span><i class="fas fa-map-marker-alt"></i> Honeymoon Package</span>
-              </div>
-            </div>
-
+            {% endfor %}
+            
           </div>
           <!-- Featured Tours End -->
 
@@ -880,7 +837,7 @@
       <div class="container">
         <div class="sigma_footer-top">
           <div class="sigma_footer-logo">
-            <img src="{% static 'img/logo.png' %}" alt="logo">
+            <img src="{% static 'img/logo.png' %}" width="100" height="100" alt="logo">
           </div>
           <div class="footer-item">
             <ul class="sigma_footer-links">

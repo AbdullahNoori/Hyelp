@@ -8,11 +8,15 @@ class YelpAPI:
         api_key = str(os.getenv('api_key'))
         self.headers = {'Authorization': 'Bearer %s' % api_key}
     
-    def search(self, query, location):
+    def search(self, query, location, limit=5):
         """ search for businesses by query and location """
     
         url = 'https://api.yelp.com/v3/businesses/search'
-        params = {'term': query,'location': location}
+        params = {
+            'term': query,
+            'location': location, 
+            "limit": limit
+            }
         res = requests.get(url, params = params, headers = self.headers)
         
         return json.loads(res.text)

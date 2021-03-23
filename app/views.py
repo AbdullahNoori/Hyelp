@@ -4,9 +4,9 @@ from django.http import HttpResponse
 
 def index(request):
     yelp = YelpAPI()
-    yelp_results = yelp.search("hotel", "San Francisco")
+    yelp_results = yelp.search("hotel", "San Francisco", 10)
     context = {
-        "data": yelp_results['businesses']
+        "featured_businesses": yelp_results['businesses']
     }
     return render(request, 'app/home-v2.html', context)
 
@@ -20,7 +20,7 @@ def search(request):
     query = request.GET.get('query', "Hotel")
     location = request.GET.get('location', "San Francisco")
     yelp = YelpAPI()
-    yelp_results = yelp.search(query, location)
+    yelp_results = yelp.search(query, location, 10)
     context = {
         "data": yelp_results['businesses']
     }
