@@ -19,11 +19,14 @@ def search(request):
     
     query = request.GET.get('query', "Hotel")
     location = request.GET.get('location', "San Francisco")
+    
     yelp = YelpAPI()
     yelp_results = yelp.search(query, location, 10)
+    yelp_featured = yelp.search(query, location, 5, "rating")
+    
     context = {
-        "data": yelp_results['businesses']
+        "data": yelp_results['businesses'],
+        "yelp_featured": yelp_featured['businesses']
     }
-    print(yelp_results)
     
     return render(request, 'app/home-v2.html', context)
