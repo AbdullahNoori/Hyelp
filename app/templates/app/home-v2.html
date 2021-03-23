@@ -119,86 +119,71 @@
               <h5>Filter Tours</h5>
 
               <div class="acr-filter-form">
-                <form method="post">
+                <form  action="{% url 'search' %}" method="get">
+                  {% csrf_token %}
+                  <!-- Keyword -->
+                  <div class="acr-custom-select form-group">
+                    <label>Keyword: </label>
+                    <select class="acr-select2" name="query">
+                      <option value="" label="Query"></option>
+                      <option selected value="{{query}}">{{query}}</option>
+                      <option value="Hotels">Hotels</option>
+                      <option value="Restaurants">Restaurants</option>
+                      <option value="Barber shop">Barber shop</option>
+                      <option value="Mattresses">Mattresses</option>
+                      <option value="Cleaning">Cleaning</option>
+                      <option value="Jewelry">Jewelry</option>
+                      <option value="Sold">Sold</option>
+                      <option value="Auto Insurance">Auto Insurance</option>
+                      <option value="Gas station">Gas station</option>
+                    </select>
+                  </div>
+                  <!-- location -->
                   <div class="acr-custom-select form-group">
                     <label>Location: </label>
                     <select class="acr-select2" name="location">
                       <option value="" label="Location"></option>
-                      <option value="*">Any Location</option>
-                      <option value="California, CA">California, CA</option>
-                      <option value="Lawndale, CA">Lawndale, CA</option>
-                      <option value="Stroudsburg, PA">Stroudsburg, PA</option>
-                      <option selected value="West Roxbury, MA">West Roxbury, MA</option>
-                      <option value="Ponte Vedra Beach, FL">Ponte Vedra Beach, FL</option>
-                      <option value="Fort Worth, TX">Fort Worth, TX</option>
+                      <option value="San Francisco, CA">San Francisco, CA</option>
+                      <option value="Los Angeles, CA">Los Angeles, CA</option>
+                      <option value="New York City, NY">New York City, NY</option>
+                      <option selected value="{{location}}">{{location}}</option>
+                      <option value="Miami Beach, FL">Ponte Vedra Beach, FL</option>
+                      <option value="Chicago, IL">Chicago, IL</option>
                       <option value="Willingboro, NJ">Willingboro, NJ</option>
                     </select>
                   </div>
+                  <!-- sort_by -->
                   <div class="acr-custom-select form-group">
-                    <label>Status: </label>
-                    <select class="acr-select2" name="status">
-                      <option value="" label="Status"></option>
-                      <option selected value="*">Any Status</option>
-                      <option value="For Property">For Property</option>
-                      <option value="Featured">Featured</option>
-                      <option value="For Property Package">For Property Package</option>
-                      <option value="Batchelor Property">Batchelor Property</option>
-                      <option value="New Addition">New Addition</option>
-                      <option value="Sold">Sold</option>
-                      <option value="New Destinations">New Destinations</option>
-                      <option value="Reduced">Reduced</option>
-                      <option value="Special Offer">Special Offer</option>
-                    </select>
+                      <label>Sort By: </label>
+                      <select class="acr-select2" name="sort_by">
+                        <option value="" label="Sort By"></option>
+                        <option selected value="{{sort_by}}">{{sort_by}}</option>
+                        <option value="best_match">Best Match</option>
+                        <option value="rating">Rating</option>
+                        <option value="review_count">Review Count</option>
+                        <option value="distance">Distance</option>
+                      </select>
                   </div>
+                  <!-- price -->
                   <div class="acr-custom-select form-group">
                     <label>Price Range: </label>
                     <select class="acr-select2" name="price">
                       <option value="" label="Price Range"></option>
-                      <option selected value="*">Any Range</option>
-                      <option value="$60k - $80k">$60k - $80k</option>
-                      <option value="$80k - $100k">$80k - $100k</option>
-                      <option value="$100k - $120k">$100k - $120k</option>
-                      <option value="$120k - $140k">$120k - $140k</option>
-                      <option value="$140k - $160k">$140k - $160k</option>
-                      <option value="$160k - $180k">$160k - $180k</option>
-                      <option value="$180k - $200k">$180k - $200k</option>
+                      <option selected value="{{price}}">{{price}}</option>
+                      <option value="1">$</option>
+                      <option value="2">$$</option>
+                      <option value="3">$$$</option>
+                      <option value="4">$$$$</option>
                     </select>
                   </div>
+                  <!-- open_now -->
                   <div class="acr-custom-select form-group">
-                    <label>Hotel: </label>
-                    <select class="acr-select2" name="beds">
-                      <option value="" label="Hotel"></option>
-                      <option selected value="*">Any amount</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5+">5+</option>
-                    </select>
-                  </div>
-                  <div class="acr-custom-select form-group">
-                    <label>Guest Room </label>
-                    <select class="acr-select2" name="baths">
-                      <option value="" label="Guide"></option>
-                      <option selected value="*">Any amount</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5+">5+</option>
-                    </select>
-                  </div>
-                  <div class="acr-custom-select form-group">
-                    <label>Type: </label>
-                    <select class="acr-select2" name="type">
-                      <option value="" label="Type"></option>
-                      <option selected value="*">Any Type</option>
-                      <option value="Cruise">Cruise</option>
-                      <option value="Photobooth">Photobooth</option>
-                      <option value="Property Music">Property Music</option>
-                      <option value="Property Cakes">Property Cakes</option>
-                      <option value="Property Gifts">Property Gifts</option>
-                      <option value="Kerala , India">Kerala , India</option>
+                    <label>Open Now: </label>
+                    <select class="acr-select2" name="open_now">
+                      <option value="" label="Open Now"></option>
+                      <option selected value="{{open_now}}">{{open_now}}</option>
+                      <option value="true">Yes</option>
+                      <option value="false">No</option>
                     </select>
                   </div>
                   <button type="submit" class="btn-block btn-custom" name="button">Apply filters</button>
@@ -222,6 +207,10 @@
                   {% if business.price %}
                   <span class="listing-price">{{business.price}} </span>
                   {% endif %}
+                  <span class="listing-price">
+                      {{business.location.address1}} {{business.location.address2}} {{business.location.address3}}
+                      {{business.location.city}}, {{business.location.state}} {{business.location.zip_code}}
+                  </span>
                 </div>
               </div>
               <!-- Listing End -->
