@@ -1,1 +1,1 @@
-web: gunicorn hyelp.wsgi
+web: gunicorn Hyelp.wsgi
