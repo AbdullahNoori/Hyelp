@@ -20,23 +20,23 @@ cp .env-example .env
 # start the server
 python3 manage.py runserver
 
-api_key = Your YELP API
-SECRET_KEY= Input random characters here
+- api_key = Your YELP API
+- SECRET_KEY= Input random characters here
 
 You can also create this file by copying the .env-example file at the root:
 
-cp .env-example .env
-Starting the Application
-pip3 install -r requirements.txt
-python3 manage.py runserver
+- cp .env-example .env
+- Starting the Application
+- pip3 install -r requirements.txt
+- python3 manage.py runserver
 
-## Libraries We'll Use
+## Libraries
 This app uses the following technologies:
 
-YELP Fusion
-Django
-Json
-Requests
+- YELP Fusion
+- Django
+- Json
+- Requests
 
 
 This repo was written and is maintained by the Fullstack AVA Team. 
