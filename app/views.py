@@ -38,3 +38,6 @@ def search(request):
     }
     
     return render(request, 'app/home-v2.html', context)
+
+
+    
