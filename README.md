@@ -1,4 +1,4 @@
-# Hyelp [Link](https://helper-int23.herokuapp.com/)
+
 Build a Yelp Clone using Django 
 
 Let's build a lightweight clone of Yelp using Django.
