@@ -8,7 +8,7 @@ In this tutorial we'll talk about:
 ## Quickstart
 First, clone the repository:
 
-git clone https://github.com/AbdullahNoori/Hyelp.git 
+git clone 'repo'
 cd Hyelp
 
 ## install the dependencies
