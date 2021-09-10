@@ -33,7 +33,7 @@ python-dotenv==0.15.0
 pytz==2021.1
 requests==2.25.1
 six==1.15.0
-sqlparse==0.4.1
+sqlparse==0.4.2
 style==1.1.0
 toml==0.10.2
 update==0.0.1
